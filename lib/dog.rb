@@ -62,7 +62,7 @@ class Dog
     FROM dogs
     WHERE name = ?, breed = ?
     SQL
-      dog = DB[:conn].execute(sql, name, breed)
+      dog = DB[:conn].execute(sql, "#{name}", "#{breed}")
     if !dog[0].empty?
       find_by_name(name)
     else
