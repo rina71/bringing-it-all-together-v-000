@@ -60,7 +60,7 @@ class Dog
     sql = <<-SQL
     SELECT *
     FROM dogs
-    WHERE name = "#{name}", breed = "#{breed}"
+    WHERE name = "#{name}" AND breed = "#{breed}"
     SQL
     binding.pry
       dog = DB[:conn].execute(sql)
