@@ -62,7 +62,6 @@ class Dog
     FROM dogs
     WHERE name = "#{name}" AND breed = "#{breed}"
     SQL
-    binding.pry
       dog = DB[:conn].execute(sql)
     if !dog.empty?
       dog_data = dog[0]
